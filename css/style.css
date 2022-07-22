@@ -1,6 +1,10 @@
 /* =====================
     Common Utilities CSS
 ======================== */
+:root {
+    --main-color: #DD0000;
+}
+
 
 * {
     margin: 0;
@@ -8,15 +12,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 .container {
-    width: 70%;
+    width: 80%;
 }
 
 .btn {
     padding: 16px 25px;
-    background: #DD0000;
+    background: var(--main-color);
     border-radius: 5px;
-    border: 1px solid #DD0000;
+    border: 1px solid var(--main-color);
     display: flex;
     align-items: center;
     transition: background ease .5s;
@@ -24,10 +36,10 @@
     -moz-transition: background ease .5s;
     -ms-transition: background ease .5s;
     -o-transition: background ease .5s;
+    cursor: pointer;
 }
 
 .btn a {
-    text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -45,8 +57,9 @@
 .btn:hover {
     background-color: #161616;
 }
+
 /* =====================
-    Header CSS
+    Header CSS Styles
 ======================== */
 #header {
     display: flex;
@@ -58,19 +71,19 @@
     align-items: center;
     background-color: #161616;
     border-radius: 30px;
-    padding: 30px 80px 0;
+    margin: 30px 80px 0;
 }
 
 #header .header-banner .header-content {
     width: 50%;
-    margin: 0 30px;
+    margin: 100px 100px;
 }
 
 #header .header-banner .header-content h1 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 4em;
     line-height: 80px;
     color: #FFFFFF;
 }
@@ -92,6 +105,7 @@
 #header .header-banner .header-image {
     width: 50%;
     text-align: center;
+    margin: 20px 25px 0;
 }
 
 #header .header-banner .header-image img {
@@ -99,5 +113,211 @@
 }
 
 /* =====================
-    Header CSS
+    Main CSS Styles
 ======================== */
+#main {
+    margin: 130px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#main .main-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 24px;
+}
+
+#main .main-section .side-bar {}
+
+#main .main-section .side-bar ul {
+    background-color: #161616;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+#main .main-section .side-bar ul li {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 17px 40px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    transition: background ease .5s;
+    -webkit-transition: background ease .5s;
+    -moz-transition: background ease .5s;
+    -ms-transition: background ease .5s;
+    -o-transition: background ease .5s;
+}
+
+
+
+#main .main-section .side-bar ul li a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #161616;
+}
+
+#main .main-section .side-bar ul li.active {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+#main .main-section .side-bar ul li.active:hover {
+    background-color: #161616;
+}
+
+#main .main-section .side-bar ul li.active a {
+
+    color: #FFFFFF;
+}
+
+#main .main-section .blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+#main .main-section .blogs .blog {
+    display: flex;
+    flex-direction: column;
+    box-shadow: .1px .1px 1px #161616;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#main .main-section .blogs .blog .blog-thumbnail {
+    width: 100%;
+    height: 175px;
+}
+
+#main .main-section .blogs .blog .blog-thumbnail img {
+    width: 100%;
+}
+
+#main .main-section .blogs .blog .blog-details {
+    margin: 10px;
+}
+
+#main .main-section .blogs .blog .blog-details .blog-type {
+    border: 1px solid #161616;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 4px 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #161616;
+}
+
+#main .main-section .blogs .blog .blog-details .blog-title {
+    margin-top: 15px;
+}
+
+#main .main-section .blogs .blog .blog-details .blog-info {
+    display: flex;
+    gap: 30px;
+}
+
+#main .main-section .blogs .blog .blog-details .blog-info p {
+    margin: 15px 0;
+}
+
+#main .main-section .blogs .blog .blog-details .blog-info p i {
+    margin-right: 30px;
+}
+
+
+/* =====================
+    Footer CSS Styles
+======================== */
+
+
+#footer {
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+}
+
+#footer .footer-inner {
+    margin: 100px 0;
+}
+
+#footer .footer-inner .footer-heading {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#footer .footer-inner .footer-heading h1 {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+#footer .footer-inner hr {}
+
+#footer .footer-inner .footer-button {
+    margin: 30px 0;
+}
+
+#footer .footer-inner .footer-button ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+#footer .footer-inner .footer-button ul li {}
+
+#footer .footer-inner .footer-button ul li a {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+#footer .footer-inner .footer-social-iocn {}
+
+#footer .footer-inner .footer-social-iocn ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+#footer .footer-inner .footer-social-iocn ul li {}
+
+#footer .footer-inner .footer-social-iocn ul li a {}
+
+#footer .footer-inner .footer-social-iocn ul li a i {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================
+    Responsive CSS Styles
+======================== */
+
+@media only screen and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+}
